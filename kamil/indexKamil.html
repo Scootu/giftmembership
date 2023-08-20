@@ -1,0 +1,182 @@
+<!-- <html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head> -->
+
+<body>
+    <!-- Gifts section -->
+    <section class="gift_memberships">
+        <img src="https://i.ibb.co/zrLX3VM/gift.png" alt="">
+        <h1>Select a gift membership</h1>
+        <div class="gift_card">
+            <div class="gift_card_description">
+                <h3>U.S. discovery</h3>
+                <p>Your friends or family members can explore their American roots with access to billions of records
+                    from all 50 states.</p>
+            </div>
+            <div class="gift_card_prices">
+                <div class="radio_option_wrapper">
+                    <input type="radio" name="price" id="price1" value="$99 / 6 months" data-gift-name="U.S. Discovery">
+                    <label for="price1">$99 <span>/ 6 months</span></label>
+                </div>
+                <div class="radio_option_wrapper">
+                    <input type="radio" name="price" id="price2" value="$189 / 12 months"
+                        data-gift-name="U.S. Discovery">
+                    <label for="price2">$189 <span>/ 12 months</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="gift_card">
+            <div class="gift_card_description">
+                <h3>World explorer</h3>
+                <p>Recipients will be able to search for U.S. and international family with access to billions of
+                    records from 80+ countries.</p>
+            </div>
+            <div class="gift_card_prices">
+                <div class="radio_option_wrapper">
+                    <input type="radio" name="price" id="price3" value="$149 / 6 months"
+                        data-gift-name="World Explorer">
+                    <label for="price3">$149 <span>/ 6 months</span></label>
+                </div>
+                <div class="radio_option_wrapper">
+                    <input type="radio" name="price" id="price4" value="$299 / 12 months"
+                        data-gift-name="World Explorer">
+                    <label for="price4">$299 <span>/ 12 months</span></label>
+                </div>
+            </div>
+        </div>
+        <small class="membership_info">Keep in mind that this is a one-time, non-renewing membership and you will only
+            be billed for the cost of the membership you select above.</small>
+        <button class="order_btn gift_not_selected">
+            <span>Order now</span>
+            <svg class="loading_svg hidden" width="30" height="30" xmlns="http://www.w3.org/2000/svg" class="hidden">
+                <circle cx="15" cy="15" r="10"></circle>
+                <circle cx="15" cy="15" r="10"></circle>
+            </svg>
+        </button>
+    </section>
+
+    <section class="payments">
+        <div class="payment_info">
+            <span>World explorer</span>
+            <span>$149 / 6 months</span>
+        </div>
+        <div>
+            <h3>Select payment method</h3>
+            <div class="payment_methods">
+                <label for="visa" class="selected">
+                    <input type="radio" name="payment_method" id="visa" value="visa" checked>
+                    <img src="https://i.ibb.co/WgLMk2R/visa.webp" alt="Visa">
+                </label>
+                <label for="paypal">
+                    <input type="radio" name="payment_method" id="paypal" value="paypal">
+                    <img src="https://i.ibb.co/7YPj9th/paypal.webp" alt="paypal">
+                </label>
+                <label for="psc">
+                    <input type="radio" name="payment_method" id="psc" value="psc">
+                    <img src="https://i.ibb.co/yQ375Dn/psc.webp" alt="Paysafecard">
+                </label>
+            </div>
+            <h3>Fill the form</h3>
+            <form action="#" data-form="visa" autocomplete="off">
+                <div class="form_control">
+                    <label for="visa_num">Card number</label>
+                    <input type="number" id="visa_num" placeholder="0123 4567 8901 2345">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_control">
+                    <label for="visa_cvv">CVV</label>
+                    <input type="number" id="visa_cvv" placeholder="123">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_control">
+                    <label for="visa_holder">Card holder name</label>
+                    <input type="text" id="visa_holder" placeholder="Joe Doe">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_btns">
+                    <button class="confirm_payment_btn">Confirm payment</button>
+                    <button class="return_btn">Return to gifts</button>
+                </div>
+            </form>
+
+            <form action="#" class="hidden" data-form="paypal" autocomplete="off">
+                <div class="form_control">
+                    <label for="paypal_email">Email address</label>
+                    <input type="email" id="paypal_email" placeholder="example@email.com">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_control">
+                    <label for="paypal_description">Payment description</label>
+                    <input type="text" id="paypal_description" placeholder="Gift membership">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_btns">
+                    <button class="confirm_payment_btn">Confirm payment</button>
+                    <button class="return_btn">Return to gifts</button>
+                </div>
+            </form>
+
+            <form action="#" class="hidden" data-form="psc" autocomplete="off">
+                <div class="form_control">
+                    <label for="psc_pin">PIN number</label>
+                    <input type="number" id="psc_pin" placeholder="0123 4567 8901 2345">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_control">
+                    <label for="psc_email">Email address</label>
+                    <input type="email" id="psc_email" placeholder="example@email.com">
+                    <small class="error err_hidden">Error</small>
+                </div>
+                <div class="form_btns">
+                    <button class="confirm_payment_btn">Confirm payment</button>
+                    <button class="return_btn">Return to gifts</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success popup -->
+
+    <div class="success_popup">
+        <svg class="loading_svg_large" width="150" height="150" xmlns="http://www.w3.org/2000/svg" class="hidden">
+            <circle cx="75" cy="75" r="70"></circle>
+            <circle cx="75" cy="75" r="70"></circle>
+        </svg>
+        <p>Transaction in progress, please wait...</p>
+    </div>
+
+    <!-- Light/Dark mode toggle button -->
+    <button class="theme_btn">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"
+            stroke-width="0.00024000000000000003">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.39703 11.6315C3.39703 16.602 7.42647 20.6315 12.397 20.6315C15.6858 20.6315 18.5656 18.8664 20.1358 16.23C16.7285 17.3289 12.6922 16.7548 9.98282 14.0455C7.25201 11.3146 6.72603 7.28415 7.86703 3.89293C5.20697 5.47927 3.39703 8.38932 3.39703 11.6315ZM21.187 13.5851C22.0125 13.1021 23.255 13.6488 23 14.5706C21.7144 19.2187 17.4543 22.6315 12.397 22.6315C6.3219 22.6315 1.39703 17.7066 1.39703 11.6315C1.39703 6.58874 4.93533 2.25845 9.61528 0.999986C10.5393 0.751502 11.0645 1.99378 10.5641 2.80935C8.70026 5.84656 8.83194 10.0661 11.397 12.6312C13.9319 15.1662 18.1365 15.3702 21.187 13.5851Z"
+                fill="#0F0F0F">
+            </path>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="5" stroke="#0f0f0f" stroke-width="1.5"></circle>
+            <path d="M12 2V4" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M12 20V22" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M4 12L2 12" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M22 12L20 12" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round"></path>
+            <path d="M19.7778 4.22266L17.5558 6.25424" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round">
+            </path>
+            <path d="M4.22217 4.22266L6.44418 6.25424" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round">
+            </path>
+            <path d="M6.44434 17.5557L4.22211 19.7779" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round">
+            </path>
+            <path d="M19.7778 19.7773L17.5558 17.5551" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round">
+            </path>
+        </svg>
+    </button>
+</body>
+<!-- 
+</html> -->
